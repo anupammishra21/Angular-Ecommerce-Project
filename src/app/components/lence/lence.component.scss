@@ -20,3 +20,15 @@
   justify-content: space-around;
   margin: 20px;
 }
+
+.filter-wrapper {
+  position: relative;
+  .sort-dropdown {
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+}
+.list-container {
+  margin-top: 20px;
+}
