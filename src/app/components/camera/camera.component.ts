@@ -18,11 +18,11 @@ export class CameraComponent implements OnInit {
 
   sortOptions = [
     {
-      title: 'Price: Low to High',
+      title: 'Price- Low to High',
       asc: true,
     },
     {
-      title: 'Price: High to Low',
+      title: 'Price- High to Low',
       asc: false,
     },
   ];
