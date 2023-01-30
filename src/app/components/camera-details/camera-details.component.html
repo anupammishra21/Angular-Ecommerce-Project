@@ -1,0 +1,15 @@
+<div id="x">
+<div *ngFor="let x of cid[0].brand">
+<div class="card" style="width: 18rem;">
+    <img src="{{x.prod_img1}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{x.brand_name}}</h5>
+      <h5 class="card-title">{{x.brand_price}}</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a  class="btn btn-primary" routerLink="/details/{{cid[0].prod_id}}/{{x.brand_id}}">Go somewhere</a>
+    </div>
+  </div>
+</div>
+</div>
+
+

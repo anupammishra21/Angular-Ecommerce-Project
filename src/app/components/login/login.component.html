@@ -1,0 +1,14 @@
+<div class="login-box" >
+	<div class="login-header">Login</div>
+	<div class="login-body">
+		<form class="form-group" [formGroup]="formVal" (ngSubmit)="display()">
+			<label>Email Id:</label>
+			<input type="email" class="form-control" formControlName="email" placeholder="enter your email id">
+			<label>Password:</label>
+            <input type="password" class="form-control" formControlName="password" placeholder="enter your password"> <br>
+			<label for="submit"></label>
+			<input type="submit" value="Login" class="form-control btn btn-success " >
+		</form>
+        <p>Donot have any account?<a routerLink="/register"><u> click to sign in</u></a></p>
+	</div>
+</div>

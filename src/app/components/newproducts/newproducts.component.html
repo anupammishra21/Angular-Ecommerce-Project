@@ -1,0 +1,32 @@
+<!-- <div class="row" >
+    <div class="col-sm-2" *ngFor="let item of pro">
+        <div class="card cardStyle" >
+            <img src={{item.prod_img}} class="card-img-top" alt="logo">
+            <div class="card-body">
+              <h5 class="card-title">{{item.prod_name}}</h5>
+             
+            </div>
+          </div>
+          
+    </div>
+  </div> -->
+
+
+<!-- part2 -->
+<section>
+  <div class="container" >
+    <h2 class="text-center" id="t"> <span class="text-danger">Weekly</span>  Featured <span class="text-danger">Products</span></h2>
+    <div class="row gy-4">
+      <div class="col-sm-6 col-md-3 col-lg-3" *ngFor="let item of pro">
+        <div class="card">
+          <img src={{item.prod_img}} class="card-img-top" alt="..." id="i" routerLink="/newProductsDetails/{{ item.prod_id }}">
+          <div class="card-body">
+            <h5 class="card-title text-center">{{item.prod_name}}</h5></div>
+          
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

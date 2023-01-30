@@ -1,0 +1,109 @@
+<header>
+
+  <body>
+    <title>lensation</title>
+    <!-- header section -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          Lensation
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/camera">Camera</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/lence">Lences</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/accessories">accessories</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">about</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" id="navbarDropdown">
+                <i class="bi bi-person">profile</i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/login">Login</a></li>
+                <li><a class="dropdown-item" routerLink="/register">Register</a></li>
+                <li><a class="dropdown-item" (click)="logout()">logout</a></li>
+
+              </ul>
+            </li>
+
+
+          </ul>
+
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <form class="search-form">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success search-btn" type="submit">Search</button>
+            </form>
+          
+            <!-- <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="bi bi-heart">h</i>
+  
+              </a>
+  
+            </li> -->
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="#">
+                cart
+              </a> -->
+              <a routerLink="/cartItem"> <i style="font-size:30px;" class="fas fa-cart-plus"></i>
+                <div style="font-size: 10px;" class="badge bg-success">{{totalItem}}</div></a>
+            </li>&nbsp;&nbsp;&nbsp;&nbsp;
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" id="navbarDropdown">
+                <i class="bi bi-person">profile</i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/login">Login</a></li>
+                <li><a class="dropdown-item" routerLink="/register">Register</a></li>
+                <li><a class="dropdown-item" (click)="logout()">logout</a></li>
+
+              </ul>
+            </li>&nbsp;&nbsp; -->
+              <li class="nav-item">
+                <i class="fa-solid fa-user"></i>
+              
+              </li>&nbsp;&nbsp;
+              <div >
+              <li class="nav-item">
+                <b><i>Hello! {{userVal?.first_name}}</i></b>
+              </li>
+              <!-- <li class="nav-item">
+                <button>logout</button>
+              </li> -->
+            </div>
+
+          </ul>
+          
+          
+         
+
+
+        </div>
+      </div>
+    </nav>
+  </body>
+</header>
+

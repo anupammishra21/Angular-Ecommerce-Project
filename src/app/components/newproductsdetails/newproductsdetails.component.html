@@ -1,0 +1,57 @@
+<!-- <div class="container"*ngFor="let data of pro">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{{data.prod_img}}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{{data.prod_img}}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{{data.prod_img}}" class="d-block w-100" alt="...">
+        </div>
+        
+      </div>
+    </div>
+    <p class="d">{{data.prod_name}}</p>
+  </div> -->
+
+
+  <!-- part2 -->
+
+  <body>
+
+    <div class = "main-wrapper"*ngFor="let data of pro">
+        <div class = "container">
+            <div class = "product-div">
+                <div class = "product-div-left">
+                    <div class = "img-container">
+                        <img src = {{data.prod_img}} alt = "watch">
+                    </div>
+                    <div class = "hover-container" >
+                        <div><img src = {{data.prod_img}}></div>
+                        <div><img src = {{data.prod_img}}></div>
+                        <div><img src = {{data.prod_img}}></div>
+                        
+                    </div>
+                </div>
+                <div class = "product-div-right">
+                    <span class = "product-name">{{data.prod_name}}</span>
+                    <span class = "product-price"><b>PRICE:</b> {{data.prod_price}}</span>
+                    <div class = "product-rating">
+                        
+                    </div>
+                    <p class = "product-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae animi ad minima veritatis dolore. Architecto facere dignissimos voluptate fugit ratione molestias quis quidem exercitationem voluptas.</p>
+                    <div class = "btn-groups">
+                        <button type = "button" class = "add-cart-btn" (click)="addToCart(data)"><i class = "fas fa-shopping-cart"></i>add to cart</button>
+                        <button type = "button"  routerLink="/buyNow"class = "buy-now-btn"><i class = "fas fa-wallet"></i>buy now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    
+  </body>
+
+

@@ -1,0 +1,19 @@
+
+
+
+<div class="row">
+  <!-- <div *ngIf="!productList.length" class="align-center" > <h2 style="color: red;">No Data Found</h2>  </div> -->
+  <div class="col-sm-4" *ngFor="let x of cid[0].prod">
+    <div class="card-wrapper">
+      <div class="card cardStyle">
+        <img class="product-image" src={{x.prod_img}} alt="product image">
+        <div class="card-body">
+          <h5 class="card-title"><b>{{x.prod_name}}</b></h5>
+          <h5 class="card-title" style="color: red;"><b>₹{{x.prod_price}}</b></h5>
+          <button type="button" class="btn btn-outline-success" routerLink="/accMoreDetails/{{cid[0].brand_id}}/{{x.prod_id}}">products
+            details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

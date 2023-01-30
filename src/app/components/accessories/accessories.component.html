@@ -1,0 +1,13 @@
+
+
+  <div class="row" >
+    <div class="col-sm-4" *ngFor="let data of acc">
+        <div class="card cardStyle" >
+            <img src={{data.brand_img}} class="card-img-top" alt=" brands image" routerLink="/accessoriesDetails/{{ data.brand_id }}">
+            <div class="card-body">
+              <h5 class="card-title">{{data.brand_name}}</h5>
+             
+            </div>
+          </div>
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-sm-4" *ngFor="let data of lence">
+    <div class="card-wrapper">
+      <div class="card cardStyle">
+        <img class="product-image" src={{data.prod_img}} alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>{{data.prod_name}}</b></h5>
+          <h5 class="card-title"><b>{{data.prod_rating}}</b></h5>
+          <h5 class="card-title" style="color: red;"><b>₹{{data.prod_price}}</b></h5>
+          <button type="button" class="btn btn-success" routerLink="/lenceDetails/{{ data.prod_id }}">products
+            details</button>&nbsp;
+          <button type="button" class="btn btn-info" (click)="addToCart(data)">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

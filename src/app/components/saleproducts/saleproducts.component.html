@@ -1,0 +1,45 @@
+<div class="container">
+  <h2 class="text-center "> -------------- <span class="text-danger">New</span> Year <span
+      class="text-danger">Offer</span> -------------</h2>
+  <div class="row gy-4">
+    <div class="col-sm-6 col-md-3 col-lg-3" *ngFor="let item of products">
+      <div class="card">
+        <img src={{item.prod_img}} class="card-img-top" alt="..." id="i">
+        <div class="card-body">
+          <h5 class="card-title">{{item.prod_name}}</h5>
+          <h5 class="card-title">{{item.prod_price}}</h5>
+          <h5 class="card-title">{{item.prod_rating}}</h5>
+
+
+
+        </div>
+        <div class='a'>
+          <a  class="btn btn-info" (click)="addToCart(item)">ADD TO CART</a>&nbsp;
+          <a routerLink="/saleproductsDetails/{{ item.prod_id }}" class="btn btn-warning">Details</a>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- part2 -->
+<!-- <div class="row">
+  
+  <div class="col-sm-3" *ngFor="let data of products">
+    <div class="card-wrapper">
+      <div class="card cardStyle">
+        <img class="product-image" src= {{data.prod_img}} alt=""  routerLink="/details/{{ data.prod_id }}">
+        <div class="card-body">
+          <h5 class="card-title"><b>{{data.prod_name}}</b></h5>
+          <h5 class="card-title" style="color: red;"><b>₹{{data.prod_price}}</b></h5>
+          <button type="button" class="btn btn-outline-success"
+          routerLink="/details/{{ data.prod_id }}" >products
+            details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

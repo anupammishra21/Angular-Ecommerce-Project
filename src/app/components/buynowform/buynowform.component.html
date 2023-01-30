@@ -1,0 +1,123 @@
+<div class="container">
+    
+  <form [formGroup]="formVal" (ngSubmit)="submitVal()">
+    <div class="row">
+      <div class="col">
+        <h3 class="title">billing address</h3>
+
+        <div class="inputBox">
+          <span>Full name :</span>
+          <input
+            type="text"
+            placeholder="enter your full name"
+            formControlName="fname"
+          />
+        </div>
+        <div class="inputBox">
+          <span>email :</span>
+          <input
+            type="email"
+            placeholder="enter your email-address"
+            formControlName="email"
+          />
+        </div>
+        <div class="inputBox">
+          <span>address :</span>
+          <input
+            type="text"
+            placeholder="room - street - locality"
+            formControlName="address"
+          />
+        </div>
+        <div class="inputBox">
+          <span>city :</span>
+          <input
+            type="text"
+            placeholder="enter your city"
+            formControlName="city"
+          />
+        </div>
+
+        <div class="flex">
+          <div class="inputBox">
+            <span>state :</span>
+            <input
+              type="text"
+              placeholder="enter your state"
+              formControlName="state"
+            />
+          </div>
+          <div class="inputBox">
+            <span>zip code :</span>
+            <input
+              type="text"
+              placeholder="enter zip code"
+              formControlName="zipCode"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <h3 class="title">payment</h3>
+
+        <div class="inputBox">
+          <span>cards accepted :</span>
+          <img
+            src="../../../assets/project image webskitters/formimg/card1.png"
+            alt=""
+          />
+          <img
+            src="../../../assets/project image webskitters/formimg/card2.png"
+            alt=""
+          />
+        </div>
+        <div class="inputBox">
+          <span>name on card :</span>
+          <input
+            type="text"
+            placeholder="enter card-holder name"
+            formControlName="cardHolder"
+          />
+        </div>
+        <div class="inputBox">
+          <span> card number :</span>
+          <input
+            type="number"
+            placeholder="enter card number"
+            formControlName="cardNumber"
+          />
+        </div>
+        <div class="inputBox">
+          <span>exp month :</span>
+          <input
+            type="text"
+            placeholder="enter card exp month"
+            formControlName="expMonth"
+          />
+        </div>
+
+        <div class="flex">
+          <div class="inputBox">
+            <span>exp year :</span>
+            <input
+              type="number"
+              placeholder="enter card exp year"
+              formControlName="expYear"
+            />
+          </div>
+          <div class="inputBox">
+            <span>CVV :</span>
+            <input
+              type="text"
+              placeholder="enter card cvv"
+              formControlName="cvv"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <input type="submit" value="proceed to pay" class="submit-btn" routerLink="/finalPage"/>
+  </form>
+</div>

@@ -1,0 +1,66 @@
+<ng-container *ngIf="product.length!=0">
+    <div class="container">
+        <div class="card-table">
+            <div class="card-product">
+                <div class="image">
+                <img src="assets/promo.jpg" alt="discount">
+            </div>
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>sr. no.</th>
+                            <th>product name</th>
+                            <!-- <th>product image</th> -->
+                            <th>product price</th>
+                            <th>quantity</th>
+                            <th>total</th>
+                            <th>action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of product,let i=index">
+                            <td style="width: 12%;">{{i+1}}</td>
+                            <td style="width: 12%;">{{data.prod_name}}</td>
+                            <!-- <td style="width: 120px;">{{data.prod_img3}}</td> -->
+                            <td style="width: 12%;">{{data.prod_price}}</td>
+                            <td style="width: 12%;">{{data.quantity}}</td>
+                            <td style="width: 12%;">{{data.total}}</td>
+                            <td style="width: 12%;">
+                                <button class="btn btn-danger" (click)="removeItem(data)"> <i class="fas fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td><button class="btn btn-danger" (click)="emptyCart()">empty cart</button></td>
+                            <td><button class="btn btn-success" routerLink="/home">shop more</button></td>
+                            <!-- <td><button class="btn btn-warning" routerLink="/buyNow">proceed to checkout</button></td> -->
+                            <!-- <td><strong>Grand Total :₹{{grandTotal}}</strong></td> -->
+                        </tr>
+                    </tbody>
+                </table>
+
+                <strong>Grand Total :₹{{grandTotal}}</strong><br><br>
+                <button class="btn btn-warning" routerLink="/buyNow">proceed to checkout</button><br><br>
+            </div>
+        </div>
+    </div>
+
+</ng-container>
+
+
+
+<ng-container *ngIf="product.length==0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My cart</h5>
+        </div>
+        <div class="center">
+            <img style="width: 250px;" src='assets/cart.webp' alt="cart logo">
+            <h4>Your cart is empty</h4>
+            <h6>Add item to it now</h6>
+            <button class="btn btn-primary" routerLink="/home">Shop now</button>
+        </div>
+    </div>
+
+</ng-container>
+
